@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "hibernate")
+@Table(name = "city")
 public class City {
     @Id
     @Column(name = "ID")

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void Main(String [] args){
+    public static void main(String [] args){
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(City.class)
@@ -19,7 +19,7 @@ public class Main {
         try {
             session.beginTransaction();
 
-           List<City> cities = session.createQuery("from City").getResultList();
+           List<City> cities = session.createQuery("from City c where c.countryCode='TUR'").getResultList();
 
            for(City city:cities){
                System.out.println(city.getName());
