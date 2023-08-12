@@ -52,9 +52,9 @@ public class Main {
         } finally {
             factory.close();
         }
-    }
 
-    public <T> void denemee(T x) {
 
     }
+
+
 }
